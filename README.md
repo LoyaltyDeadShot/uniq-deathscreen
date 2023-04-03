@@ -2,8 +2,8 @@
 
 <br />
 <div align="center">
-  <a href="https://infinity-devt.com">
-    <img src="https://i.imgur.com/tsFkqzD.png" alt="Playtime Reward">
+  <a href="https://uniq.tebex.io">
+    <img src="https://i.imgur.com/tsFkqzD.png" alt="Death Screen">
   </a>
 
   <h3 align="center">Death Screen</h3>
