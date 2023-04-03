@@ -52,6 +52,7 @@ RegisterNuiCallback("accept_to_die", function(data)
 end)
 
 RegisterNuiCallback("call_emergency", function(data)
+    SendDistressSignal()
 end)
 
 RegisterNuiCallback("time_expired", function(data)
