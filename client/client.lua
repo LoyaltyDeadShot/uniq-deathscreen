@@ -1,3 +1,4 @@
+RegisterNetEvent('uniq-deathscreen:client:onPlayerDeath')
 AddEventHandler('uniq-deathscreen:client:onPlayerDeath', function(isDead)
     if isDead then
         local killername = nil
