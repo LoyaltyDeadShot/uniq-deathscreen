@@ -27,9 +27,7 @@
 * Emergency & accept to die buttons
 * Choose between RP/Steam name
 
-> The only thing that has to be set uped in this resource is framework and distress signal (Call Emergency button).
-The reason why we did not set up distress signal is because many people are using third party resources that are not related to framework (ESX/QBCore) they are using.
-However, we **WILL** help you setup distress signal for ESX and QBCore on our Discord Server.
+> Check out our [Documentation](https://uniq-team.gitbook.io/documentation/free-resources/death-screen) and find out how to set it up properly.
 
 ### **DISCLAIMER**
 > If any bugs or problems are found, please report the problem/pull request on GitHub page.
