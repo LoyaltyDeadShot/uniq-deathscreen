@@ -58,6 +58,6 @@ elseif Config.Framework == 'qbcore' then
     end)
 
     SendDistressSignal = function()
-        
+        TriggerServerEvent('hospital:server:ambulanceAlert', 'Critical Medical Condition')
     end
 end
