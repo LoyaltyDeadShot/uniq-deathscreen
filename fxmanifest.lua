@@ -8,7 +8,7 @@ lua54 'yes'
 name 'uniq-deathscreen'
 author 'uniq team'
 description 'Death Screen'
-version '1.0.0'
+version '1.0.1'
  
 --[[FX DEPENDENCIES]]
 dependencies {
