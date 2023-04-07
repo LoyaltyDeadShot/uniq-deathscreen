@@ -12,7 +12,8 @@ if Config.Framework == 'esx' then
         TriggerEvent('uniq-deathscreen:client:onPlayerDeath', true)
     end)
 
-    RegisterNetEvent('uniq-deathscreen:client:remove_revive', function ()
+    RegisterNetEvent('uniq-deathscreen:client:remove_revive')
+    AddEventHandler('uniq-deathscreen:client:remove_revive', function ()
         local ped = PlayerPedId()
         SetEntityCoordsNoOffset(ped, Config.RespawnCoords.coords.x, Config.RespawnCoords.coords.y, Config.RespawnCoords.coords.z, false, false, false)
         NetworkResurrectLocalPlayer(Config.RespawnCoords.coords.x, Config.RespawnCoords.coords.y, Config.RespawnCoords.coords.z, Config.RespawnCoords.heading, true, false)
@@ -26,7 +27,8 @@ if Config.Framework == 'esx' then
         TriggerEvent('uniq-deathscreen:client:setDeathStatus', false)
     end)
 
-    RegisterNetEvent('uniq-deathscreen:client:setDeathStatus', function (bool)
+    RegisterNetEvent('uniq-deathscreen:client:setDeathStatus')
+    AddEventHandler('uniq-deathscreen:client:remove_revive', function (bool)
         TriggerServerEvent('esx_ambulancejob:setDeathStatus', bool)
     end)
 
@@ -45,14 +47,16 @@ elseif Config.Framework == 'qbcore' then
         playerJob = JobInfo
     end)
     
-    RegisterNetEvent('uniq-deathscreen:client:remove_revive', function ()
+    RegisterNetEvent('uniq-deathscreen:client:remove_revive')
+    AddEventHandler('uniq-deathscreen:client:remove_revive', function ()
         local ped = PlayerPedId()
     
         TriggerServerEvent('hospital:server:RespawnAtHospital')
         TriggerEvent('uniq-deathscreen:client:setDeathStatus', false)
     end)
-    
-    RegisterNetEvent('uniq-deathscreen:client:setDeathStatus', function (bool)
+
+    RegisterNetEvent('uniq-deathscreen:client:setDeathStatus')
+    AddEventHandler('uniq-deathscreen:client:remove_revive', function (bool)
         TriggerServerEvent("hospital:server:SetDeathStatus", bool)
         TriggerServerEvent("hospital:server:SetLaststandStatus", bool)
     end)
