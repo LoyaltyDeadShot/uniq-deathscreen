@@ -1,6 +1,4 @@
-if Config.NetworkProblem then
-    RegisterNetEvent('uniq-deathscreen:client:onPlayerDeath')
-end
+RegisterNetEvent('uniq-deathscreen:client:onPlayerDeath')
 AddEventHandler('uniq-deathscreen:client:onPlayerDeath', function(isDead)
     if isDead then
         local killername = nil
@@ -32,11 +30,13 @@ AddEventHandler('uniq-deathscreen:client:onPlayerDeath', function(isDead)
     end
 end)
 
-RegisterNetEvent('uniq-deathscreen:client:getRPName', function (name)
+RegisterNetEvent('uniq-deathscreen:client:getRPName')
+AddEventHandler('uniq-deathscreen:client:getRPName', function(name)
     SendNUIMessage({type = 'setUPValues', killer = name, timer = Config.Timer})
 end)
 
-RegisterNetEvent('uniq-deathscreen:client:hide_ui', function ()
+RegisterNetEvent('uniq-deathscreen:client:hide_ui')
+AddEventHandler('uniq-deathscreen:client:hide_ui', function()
     SendNUIMessage({type = "show", status = false})
     SetNuiFocus(false, false)
 end)
