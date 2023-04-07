@@ -23,7 +23,8 @@ elseif Config.Framework == 'qbcore' then
         Player.Functions.RemoveMoney("cash", Config.PriceForDead)
     end)
 
-    RegisterNetEvent('hospital:server:SetLaststandStatus', function(isDead)
+    RegisterNetEvent('hospital:server:SetLaststandStatus')
+    AddEventHandler('hospital:server:SetLaststandStatus', function(isDead)
         TriggerClientEvent('uniq-deathscreen:client:onPlayerDeath', source, isDead)
     end)
 
